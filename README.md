@@ -173,7 +173,6 @@ Multiple SNP datasets were generated optimized for specific analyses (see sectio
 ### 5. TX vs. NC structure
 
 ```r
-# See scripts/TX_NC_fst.R
 library(hierfstat)
 
 # Pairwise FST per sampling year (2014, 2015, 2016)
@@ -187,7 +186,7 @@ ci <- boot.ppfst(dat, nboot = 1000, quant = c(0.025, 0.975))
 ### 6. Texas analysis
 
 ```r
-# See scripts/Texas_analysis.R
+
 library(hierfstat); library(adegenet); library(ggplot2)
 
 # Summary statistics per year
@@ -204,7 +203,7 @@ pca <- dudi.pca(tab(genind_obj, NA.method = "mean"), scannf = FALSE, nf = 2)
 ### 7. North Carolina analysis
 
 ```r
-# See scripts/NC_analysis.R
+
 library(hierfstat); library(adegenet); library(ggplot2)
 
 # Summary statistics grouped by region × year
