@@ -77,7 +77,7 @@ Illumina NovaSeq (single-end, 90 bp)
 
 ---
 
-## Usage
+## Methods
 
 ### 1. Quality control
 
@@ -244,32 +244,6 @@ Sites sampled in ≥3 years were analyzed for temporal genetic stability:
 
 For each temporal dataset: pairwise FST (hierfstat) + PCA (adegenet).
 
----
-
-## Repository Structure
-
-```
-├── README.md
-├── barcodes/
-│   └── barcodes_YYYY.txt              # Per-year barcode files
-├── popmaps/
-│   ├── popmap_all.txt                 # All individuals
-│   ├── popmap_NC.txt                  # NC only
-│   └── popmap_TX.txt                  # TX only
-├── scripts/
-│   ├── 01_process_radtags.sh          # Demultiplexing
-│   ├── 02_denovo_stacks.sh            # SNP calling (m=3, M=2, n=2)
-│   ├── 03_species_check_treemix.sh    # P. dentatus verification
-│   ├── 04_populations_filter.sh       # Stacks populations + PLINK filtering
-│   ├── 05_HWE_filter.R                # DartR HWE filtering
-│   ├── 06_TX_NC_fst.R                 # Broad-scale TX vs. NC FST
-│   ├── 07_Texas_analysis.R            # TX summary stats, PCA, temporal FST
-│   ├── 08_NC_analysis.R               # NC FST, PCA, ADMIXTURE plots
-│   └── 09_temporal_structure.R        # Temporal FST + PCA per site
-└── figures/                           # Output figures
-```
-
----
 
 ## Dependencies
 
